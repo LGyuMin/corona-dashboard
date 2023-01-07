@@ -1,5 +1,21 @@
 import { ResponsivePie } from '@nivo/pie'
 import { ChangeEvent, useCallback, useEffect, useState } from 'react'
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+    position: relative;
+
+    select {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        z-index: 10;
+        border: none;
+        padding-right: 5px;
+        background: #F8F8F8;
+        outline: none;
+    }
+`
 
 interface IProp {
     data: any
@@ -18,7 +34,7 @@ const PieChart = ({data}: IProp) => {
 
     return (
         <>
-            <div>
+            <StyledDiv>
                 <select onChange={changeHadler}>
                     {
                         Object.keys(data).map(item => (
@@ -26,10 +42,10 @@ const PieChart = ({data}: IProp) => {
                         ))
                     }
                 </select>
-            </div>
+            </StyledDiv>
             <ResponsivePie
                 data={data[selectedDate] || []}
-                margin={{ top: 0, right: 80, bottom: 80, left: 80 }}
+                margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                 innerRadius={0.5}
                 padAngle={0.7}
                 cornerRadius={3}
@@ -45,8 +61,6 @@ const PieChart = ({data}: IProp) => {
                     ]
                 }}
                 enableArcLinkLabels={false}
-                arcLinkLabelsSkipAngle={10}
-                arcLinkLabelsTextColor="#333333"
                 arcLinkLabelsThickness={2}
                 arcLinkLabelsColor={{ from: 'color' }}
                 arcLabelsSkipAngle={10}
