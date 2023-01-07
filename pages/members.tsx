@@ -1,6 +1,6 @@
 const members = () => {
   return (
-    <div>members</div>
+    <div className='title'>members</div>
   )
 }
 
