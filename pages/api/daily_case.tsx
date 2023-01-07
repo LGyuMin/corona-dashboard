@@ -7,7 +7,6 @@ export default function daily_chart(
   req: NextApiRequest,
   nextRes: NextApiResponse<any>
 ) {
-    
     axios.get(url)
     .then(res => {
         const chatData = res.data.items.item.map((item: { stateDt: any; decideCnt: any }) => {
