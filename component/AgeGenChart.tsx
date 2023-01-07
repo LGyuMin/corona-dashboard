@@ -6,6 +6,7 @@ import axios from 'axios';
 
 const StyledDiv = styled.div`
     display: flex;
+    position: relative;
     border-top: 1px solid rgba(204, 204, 204, 0.5);
     >div {
         width: 50%;

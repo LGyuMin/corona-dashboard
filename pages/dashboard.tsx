@@ -7,7 +7,6 @@ const ChartWrapper = styled.div<{ height: number }>`
     height: ${prop => prop.height || 400}px;
     margin: 0 auto;
 `
-
 const dashboard = () => {
     return (
         <>
