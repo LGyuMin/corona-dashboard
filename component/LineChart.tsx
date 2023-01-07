@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { ResponsiveLine } from '@nivo/line'
-import axios from 'axios'
 
-function LineChart() {
-    const [ chartData, setChartData ] = useState([]);
+interface IProp {
+    data: any
+}
 
-    useEffect(() => {
-        axios.get('/api/daily_case')
-        .then(res => {
-            setChartData(res.data.data)
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }, [])
-
+const LineChart = ({data}: IProp) => {
   return (
     <ResponsiveLine
-        data={chartData}
+        data={data}
         margin={{ top: 50, right: 60, bottom: 50, left: 60 }}
         xScale={{ type: 'point' }}
         yScale={{

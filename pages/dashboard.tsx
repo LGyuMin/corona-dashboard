@@ -1,4 +1,4 @@
-import LineChart from '../component/LineChart'
+import DailyChart from '../component/DailyChart'
 import AgeGenChart from '../component/AgeGenChart'
 import styled from 'styled-components'
 
@@ -10,10 +10,7 @@ const ChartWrapper = styled.div<{ height: number }>`
 const dashboard = () => {
     return (
       <>
-        <div className='title'>코로나 일자별 확진자 수</div>
-        <ChartWrapper height={400}>
-            <LineChart />
-        </ChartWrapper>
+        <DailyChart ChartWrapper={ChartWrapper} />
         <AgeGenChart ChartWrapper={ChartWrapper} />
       </>
     )
