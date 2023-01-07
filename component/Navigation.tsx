@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link';
@@ -86,42 +85,42 @@ const menuList: IMenu[] = [
 
 const Navigation = () => {
     const router = useRouter()
-  return (
-    <StyledNav>
-        <h1>
-            <Link href="/">
-                <Image
-                    alt='DBDLAP main logo'
-                    src="/images/logo.svg"
-                    width="145"
-                    height="24"
-                />
-            </Link>
-        </h1>
-        <ul>
-            {
-                menuList.map(item => (
-                    <li 
-                        key={item.route}
-                    >
-                        <Image
-                            alt={item.alt}
-                            src={item.src}
-                            width="16"
-                            height="16"
-                        />
-                        <Link 
-                            href={item.route}
-                            className={classNames({ active: router.asPath === item.route})}
+    return (
+        <StyledNav>
+            <h1>
+                <Link href="/">
+                    <Image
+                        alt='DBDLAP main logo'
+                        src="/images/logo.svg"
+                        width="145"
+                        height="24"
+                    />
+                </Link>
+            </h1>
+            <ul>
+                {
+                    menuList.map(item => (
+                        <li 
+                            key={item.route}
                         >
-                            { item.title }
-                        </Link>
-                    </li>
-                ))
-            }
-        </ul>
-    </StyledNav>
-  )
+                            <Image
+                                alt={item.alt}
+                                src={item.src}
+                                width="16"
+                                height="16"
+                            />
+                            <Link 
+                                href={item.route}
+                                className={classNames({ active: router.asPath === item.route})}
+                            >
+                                { item.title }
+                            </Link>
+                        </li>
+                    ))
+                }
+            </ul>
+        </StyledNav>
+    )
 }
 
 export default Navigation

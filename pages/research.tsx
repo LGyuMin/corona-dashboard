@@ -1,7 +1,7 @@
 const research = () => {
     return (
-      <div className='title'>research</div>
+        <div className='title'>research</div>
     )
   }
-  
-  export default research
+
+export default research

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import { ResponsiveLine } from '@nivo/line'
 
 interface IProp {

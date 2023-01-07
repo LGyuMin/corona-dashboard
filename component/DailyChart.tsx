@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import LineChart from './LineChart'
 import { StyledComponent } from 'styled-components'
 import axios from 'axios'
