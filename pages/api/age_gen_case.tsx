@@ -26,12 +26,11 @@ export default function daily_chart(
 
         const uniqStateDts = [...new Set(stateDts)]
         
-        const ChartDate: NextResType[] = []
+        const ChartData: NextResType[] = []
 
         let obj: NextResType = {}
 
         const genChartData: any = {}
-
 
         uniqStateDts.forEach((date: string) => {
             obj = {}
@@ -49,10 +48,10 @@ export default function daily_chart(
                 { id: '여성', label: '여', value: obj.여성 }
             ]
 
-            ChartDate.push(obj)
+            ChartData.push(obj)
         });
 
-        const ageChartData = ChartDate.map(item => {
+        const ageChartData = ChartData.map(item => {
             const temp = {...item}
             delete item.남성
             delete item.여성
