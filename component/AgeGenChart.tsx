@@ -3,7 +3,6 @@ import styled, { StyledComponent } from 'styled-components'
 import BarChart from '../component/BarChart'
 import PieChart from '../component/PieChart'
 import axios from 'axios';
-import { NextResType } from '../pages/api/age_gen_case';
 
 const StyledDiv = styled.div`
     display: flex;
@@ -29,6 +28,7 @@ interface IProp {
 const AgeGenChart = ({ChartWrapper}: IProp) => {
     const [barChartData, setBarChartData] = useState([])
     const [pieChartData, setPieChartData] = useState([])
+
     useEffect(() => {
         axios.get('/api/age_gen_case')
         .then(res => {
@@ -39,7 +39,6 @@ const AgeGenChart = ({ChartWrapper}: IProp) => {
             console.log(err); 
         })
     }, [])
-    
 
     return (
         <StyledDiv>
