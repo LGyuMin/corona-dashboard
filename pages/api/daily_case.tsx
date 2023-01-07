@@ -14,7 +14,7 @@ export default function daily_chart(
                 x: item.stateDt,
                 y: item.decideCnt
             }
-        })
+        }).reverse()
 
         nextRes.status(200).json({ data: [
             {
