@@ -1,7 +1,7 @@
 # 프론트엔드 사전 과제
 
 ## 설명 및 기능
-프론트 엔드 사전과제인 대시보드 작업
+프론트 엔드 사전과제인 대시보드 작업 - [결과물 보러가기](https://front-end-assignment-seven.vercel.app/)
 
 TypeScript + React.js + Next.js 조합의 프로젝트
 
