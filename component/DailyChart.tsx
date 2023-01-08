@@ -22,8 +22,8 @@ const DailyChart = ({ChartWrapper}: IProp) => {
         setLoading(true)
         axios.get('/api/daily_case')
         .then(res => {
-            setChartData(res.data.data)
-            setLoading(false)
+            setChartData(res.data)
+            setLoading(false) 
         })
         .catch(err => {
             console.log(err);
